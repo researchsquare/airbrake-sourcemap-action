@@ -1,0 +1,16 @@
+name: 'Airbrake Sourcemap Action'
+description: 'Syncs up Airbrake sourcemaps with a JS build manifest file.'
+inputs:
+  airbrake-id:
+    description: 'Airbrake ID - required for Airbrake authentication'
+    required: true
+  airbrake-key:
+    description: 'Airbrake Key - required for Airbrake authentication'
+    required: true
+
+outputs:
+  log: # id of output
+    description: 'A log of what happened during this action run.'
+runs:
+  using: 'node12'
+  main: 'index.js'
