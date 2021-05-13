@@ -19,7 +19,7 @@ with:
 ## Development
  - Install `npm i -g @vercel/ncc` locally.
  - Write code
- - `npm run compile` to compile the assets for production
+ - `npm run package` to package up the files for distribution
  - Tag with a new version number
  - Open a PR
 
