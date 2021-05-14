@@ -1,11 +1,11 @@
 const chalk = require("chalk");
 
-module.exports = function logError(message) {
+exports.logError = function (message) {
     console.log(chalk.red(message));
     console.log(chalk.red(`=== STACK TRACE ===`));
     console.trace();
 };
 
-module.exports = function logInfo(message) {
+exports.logInfo = function (message) {
     console.info(chalk.yellow(message));
 };
