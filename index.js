@@ -14,6 +14,10 @@ async function main() {
         core.setFailed(error.message);
     }
 
+    logInfo("Build variables:");
+    logInfo(buildPath);
+    logInfo(manifest);
+
     if (!("files" in manifest)) {
         logError(
             "We currently only support Create React App generated manifest files at this time."
