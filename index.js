@@ -5,16 +5,10 @@ const { logError, logInfo } = require("./log");
 const SourceMapRepository = require("./SourceMapRepository");
 
 async function run() {
-    core.debug("Starting the action: airbrake-sourcemap-action");
-
-    try {
-        const airbrakeId = core.getInput("airbrake-id");
-        const airbrakeKey = core.getInput("airbrake-key");
-        const buildPath = core.getInput("build-path");
-        const manifest = core.getInput("manifest");
-    } catch (error) {
-        core.setFailed(error.message);
-    }
+    const airbrakeId = core.getInput("airbrake-id");
+    const airbrakeKey = core.getInput("airbrake-key");
+    const buildPath = core.getInput("build-path");
+    const manifest = core.getInput("manifest");
 
     logInfo("Build variables:");
     logInfo(buildPath);
