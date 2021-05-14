@@ -7,6 +7,12 @@ inputs:
   airbrake-key:
     description: 'Airbrake Key - required for Airbrake authentication'
     required: true
+  build-path:
+    description: 'Build path - This is the build path where the manifest assets are located.'
+    required: true
+  manifest:
+    description: 'JSON Manifest - this is a JSON object representing the manifest file'
+    required: true
 
 outputs:
   log: # id of output
