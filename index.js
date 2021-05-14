@@ -10,11 +10,13 @@ async function run() {
     const buildPath = core.getInput("build-path");
     const manifest = core.getInput("manifest");
 
-    logInfo("Build variables:");
-    logInfo(buildPath);
-    logInfo(manifest);
+    logInfo(`Build path: ${buildPath}`);
+    logInfo(`Manifest file: ${manifest}`);
 
-    if (!("files" in manifest)) {
+    const manifestJSON = JSON.parse(fs.readFileSync(manifest, "utf8"));
+    logInfo(JSON.stringify(manifestJSON));
+
+    if (!("files" in manifestJSON)) {
         logError(
             "We currently only support Create React App generated manifest files at this time."
         );
