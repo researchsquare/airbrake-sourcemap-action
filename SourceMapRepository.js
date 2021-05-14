@@ -14,7 +14,7 @@ module.exports = class SourceMapRepository {
 
         this.projectId = projectId;
         this.projectKey = projectKey;
-        this.resource = `${airbrakeUrl}/sourcemaps`;
+        this.resource = `${this.airbrakeUrl}/sourcemaps`;
     }
 
     // List all sourcemaps in an Airbrake project

@@ -14,6 +14,7 @@ async function run() {
     logInfo(`Manifest file: ${manifest}`);
 
     const manifestJSON = JSON.parse(fs.readFileSync(manifest, "utf8"));
+    logInfo("Manifest JSON:");
     logInfo(JSON.stringify(manifestJSON));
 
     if (!("files" in manifestJSON)) {
