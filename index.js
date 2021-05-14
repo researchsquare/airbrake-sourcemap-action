@@ -4,7 +4,9 @@ const fs = require("fs");
 const { logError, logInfo } = require("./log");
 const SourceMapRepository = require("./SourceMapRepository");
 
-async function main() {
+async function run() {
+    core.debug("Starting the action: airbrake-sourcemap-action");
+
     try {
         const airbrakeId = core.getInput("airbrake-id");
         const airbrakeKey = core.getInput("airbrake-key");
@@ -52,4 +54,4 @@ async function main() {
         });
 }
 
-main();
+run();
